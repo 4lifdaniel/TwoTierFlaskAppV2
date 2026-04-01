@@ -4,9 +4,10 @@
 <body>
     <h1>Messages from Database:</h1>
     <ul>
-    {% for message in messages %}
-        <li>{{ message }}</li>
-    {% endfor %}
+        {% for row in messages %}
+    <!-- row[0] is needed because MySQL returns tuples -->
+            <li>{{ row[0] }}</li>
+        {% endfor %}
     </ul>
 </body>
 </html>
