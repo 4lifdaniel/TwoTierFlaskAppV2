@@ -33,7 +33,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "flask-app.tar.gz,docker-compose.yml, templates"
+          source: "flask-app.tar.gz,docker-compose.yml, templates, message.sql"
           target: "/home/ubuntu/app"
       
       - name: Deploy on EC2
